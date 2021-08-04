@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+//for how many number from 1-M have the lowest(n) prime number; 
+int M=1000000;
+int total[1000000];
+void totalfactor(){ //Time in the mian function is O(1); & For this the time is like sieve
+   for(int i=2; i<=M; i++){
+      total[i] = 1;
+   }
+   for(int i=2; i*i<=M; i++){
+      if(total[i]==1){
+         for(int j=i*i; j<=M; j+=i){
+            if(total[j]!=0){
+               total[i]++;
+               total[j]=0;
+            }
+         }
+      }
+   }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	 <tabTrigger>totalfactor</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

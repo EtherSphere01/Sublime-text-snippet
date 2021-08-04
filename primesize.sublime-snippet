@@ -1,0 +1,26 @@
+<snippet>
+	<content><![CDATA[
+//for the size of nth prime
+void primesize(){ 
+   prime();
+   int limit=5000000;
+   int cnt=0;
+   int size=1;
+   for(int i=2;; i++){
+      if(isprime[i]==true){
+         cnt++;
+      }
+      if(cnt==limit){
+         size = i;
+         break;
+      }
+   }
+   cout << size << endl;
+
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	 <tabTrigger>primesize</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

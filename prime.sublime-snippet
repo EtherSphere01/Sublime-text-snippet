@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+int N=86028121;
+bool isprime[86028121];
+void prime(){  //Sieve of Eratosthenes(Sieve Algorithm) 
+   for(int i=2; i<=N; i++){
+      isprime[i] = true;
+   }
+   for(int i=2; i*i<=N; i++){
+      if(isprime[i]==true){
+         for(int j=i*i; j<=N; j+=i){
+            isprime[j] = false;
+         }
+      }
+   }
+   
+} // Time limit for this algorithm is - O(N(log(logN)))
+ // If we use this is main the time is - O(N(log(logN))) + Test case value (Time<10^9)
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>prime</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

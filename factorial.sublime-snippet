@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+//for the output of any numbers all factors
+int O=1000000;
+int primefactor[100000000];//the number of prime factor of a number is maximum log2^N 
+void factor(){
+   for(int i=0; i<=O; i++){
+      primefactor[i]=i;
+   }
+   for (int i=2; i*i<=O; i++){
+      if(primefactor[i]==i){
+         for(int j= i*i; j<=O; j+=i){
+            if(primefactor[j]==j){
+               primefactor[j]=i;
+            }
+         }
+      }
+   }
+}//the time limit for this is like sieve and in the main function the time is O(logN)
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>factorial</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

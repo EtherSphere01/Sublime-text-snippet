@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+//for storing all the prime;
+vector<int>pn;
+void nthprime(){ //Time for this in main function is O(1) and for this the time is like sieve
+   prime();
+   for(int i=2; i<=N; i++){
+      if(isprime[i]==true){
+         pn.push_back(i);
+      }
+   }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nthprime</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
