@@ -5,11 +5,14 @@
 	],
 	"installed_packages":
 	[
-		"Abaqus",
+		"Discord Rich Presence",
+		"Material Theme",
 		"Monokai++",
 		"Package Control",
-		"SnippetCaller",
 		"SnippetIndex",
 		"SublimeAStyleFormatter",
+		"SublimeLinter",
+		"SublimeLinter-gcc",
+		"Theme - Cobalt2",
 	],
 }
