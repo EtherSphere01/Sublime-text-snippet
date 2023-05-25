@@ -4,8 +4,6 @@
 
 using namespace std;
 
-
-
 #define fastio() ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
 #define MOD 1000000007
 #define MOD1 998244353
@@ -54,6 +52,7 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
 
 void solve() {
 
+
 }
 
 int main() {
@@ -63,11 +62,18 @@ int main() {
 	freopen("Error.txt", "w", stderr);
 #endif
 
+
 	int t; cin >> t;
 	while (t--) solve();
 
 
+#ifndef ONLINE_JUDGE
+	cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
+#endif
+
 }
+
+
 
 
 ]]></content>
