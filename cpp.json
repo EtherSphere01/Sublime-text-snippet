@@ -13,8 +13,76 @@
 	// 	"description": "Log output to console"
 	// }
 
+  "Smallest Prime Factorization": {
+  "prefix": "spf",
+  "body": [
+    "vector<ll> spf;",
+    "vector<ll> createSpf(ll n) {",
+    "    vector<ll> spff(n + 1);",
+    "    for (ll i = 1; i<=n; i++) {",
+    "        spff[i] = i;",
+    "    }",
+    "    ",
+    "    for (ll i = 2; i*i <= n; ++i) {",
+    "        if (spff[i] == i) {",
+    "            for (ll j = i * i; j <= n; j += i) {",
+    "                if(spff[j]==j){",
+    "                    spff[j] = i;",
+    "                }",
+    "            }",
+    "        }",
+    "    }",
+    "    ",
+    "    return spff;",
+    "}",
+    "",
+    "vector<ll> primeFactorization(ll n) {",
+    "    vector<ll> factors;",
+    "    while (n != 1) {",
+    "        factors.push_back(spf[n]);",
+    "        n /= spf[n];",
+    "    }",
+    "    return factors;",
+    "}"
+  ],
+  "description": ""
+},
+
+  "Divisors of a number": {
+  "prefix": "divisors",
+  "body": [
+    "vector<ll> divisors(ll n){",
+    "    vector<ll> divs;",
+    "    for(ll i = 1; i*i <= n; i++){",
+    "        if(n % i == 0){",
+    "            divs.push_back(i);",
+    "            if(i != n/i){",
+    "                divs.push_back(n/i);",
+    "            }",
+    "        }",
+    "    }",
+    "    return divs;",
+    "}"
+  ],
+  "description": ""
+},
+
+  "Find Sub String with STL": {
+  "prefix": "findsubstring",
+  "body": [
+    "bool findSubString(string s, string check){",
+    "    size_t found = s.find(check);",
+    "    if (found != string::npos){",
+    "        return true;",
+    "    }",
+    "    return false;",
+    "}"
+  ],
+  "description": ""
+},
+
   "accessFromAllSide": {
-  "prefix": "accessFromAllSide",
+  "prefix": "accessfromallside",
   "body": [
     "void accessFromAllSide(vector<vector<ll>>&arr){",
     "    // One based index array",
@@ -187,7 +255,7 @@
   "description": ""
 },
 
-  "Symmetry Check": {
+  "Symmetry Check Matrix": {
   "prefix": "symmetrycheck",
   "body": [
     "for (ll i = 0; i < n; i++) {",
