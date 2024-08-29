@@ -13,6 +13,28 @@
 	// 	"description": "Log output to console"
 	// }
 
+  "Checking From Both side": {
+  "prefix": "checkingfromallside",
+  "body": [
+    "ll cehckingFromAllSide(vector<vector<ll>>&arr){",
+    "    // One based index array",
+    "    // Row = i;",
+    "    // Column = j;",
+    "    ll count = 0;",
+    "    ll n = arr.size()-1;",
+    "    for (ll i = 1; i <= n; i++){",
+    "        for (ll j = 1; j <= n; j++){",
+    "            if(arr[i][j]!=arr[n-i+1][n-j+1]){",
+    "                count++;",
+    "            }",
+    "        }",
+    "    }",
+    "    return count / 2; // As we are counting twice from both side;",
+    "}"
+  ],
+  "description": ""
+},
+
   "Smallest Prime Factorization": {
   "prefix": "spf",
   "body": [
@@ -94,9 +116,9 @@
     "    for (ll layer = 1; layer <= n / 2; layer++, span-=2){",
     "        for (ll i = 0; i <= max(1LL*0,span); i++){",
     "            cout << arr[layer][layer+i]<< \" \";",
-    "            cout << arr[layer][n-layer+1]<< \" \";",
-    "            cout << arr[n-layer+1][n-layer-i+1]<< \" \";",
-    "            cout << arr[n-layer+1][layer]<< \" \";",
+    "            cout << arr[layer+i][n-layer+1]<< \" \";",
+    "            cout << arr[n-layer+1][n-layer+1-i]<< \" \";",
+    "            cout << arr[n-layer+1-i][layer]<< \" \";",
     "             cout << endl;",
     "        }",
     "    }",
