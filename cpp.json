@@ -13,6 +13,41 @@
 	// 	"description": "Log output to console"
 	// }
 
+  "Intersecting between range": {
+  "prefix": "isintersecting",
+  "body": [
+    "bool isIntersecting(ll l1, ll r1, ll l2, ll r2) {",
+    "    ll lo = max(l1, l2);",
+    "    ll hi = min(r1, r2);",
+    "    if(lo <= hi) return true;",
+    "    return false;",
+    "}"
+  ],
+  "description": ""
+},
+
+  "Sub array with sum zero": {
+  "prefix": "zerosubarraysum",
+  "body": [
+    " bool zerosubarraysum(vector<ll> a){",
+    "    map<ll, ll> m;",
+    "    ll presum = 0;",
+    "     for(ll i = 0; i < a.size(); i++){",
+    "         presum += a[i];",
+    "         if(presum == 0){",
+    "             return true;",
+    "         }",
+    "         if(m[presum] > 0){",
+    "             return true;",
+    "         }",
+    "        m[presum]++;",
+    "     }",
+    "     return false;",
+    " }"
+  ],
+  "description": ""
+},
+
   "nCr and others mod": {
   "prefix": "nCr",
   "body": [
